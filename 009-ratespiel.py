@@ -19,7 +19,6 @@ import os
 
 DEBUG = os.environ.get('MY_DEBUG')
 
-
 '''
 try:
     user_input = int(user_input)   
@@ -28,20 +27,23 @@ except ValueError:
     exit()
 '''
 
-def get_user_input_int(prompt: str):    
+def get_user_input_int(prompt: str, lower_imit = None, upper_limit = None):    
     while True:
         user_input = input(prompt + "(oder q zum abbrechen)")
         try:
-            user_input = int(user_input)
+            user_input = int(user_input)            
             break
         except ValueError:        
             if user_input.lower() == 'q':
                 user_input = None                
             else:
-                print('bitte eine Zahl eingeben')
+                print('bitte eine Zahl eingeben')                                  
     return user_input
 
-random_range = get_user_input_int("Zahlenbereich: ")
+
+
+random_range = get_user_input_int(prompt = "Zahlenbereich: ")
+
 if random_range is None:
     exit()
 
