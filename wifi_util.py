@@ -1,3 +1,17 @@
+def get_user_input_int(prompt: str, lower_imit = None, upper_limit = None):    
+    while True:
+        user_input = input(prompt + "(oder q zum abbrechen)")
+        try:
+            user_input = int(user_input)            
+            break
+        except ValueError:        
+            if user_input.lower() == 'q':
+                raise AttributeError
+            else:
+                print('bitte eine Zahl eingeben')                                  
+    return user_input
+
+
 def mortage_interest_maturity_after_years(
         interest_rate_percent,                             
         amount,
