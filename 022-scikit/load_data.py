@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import sklearn.linear_model
+# import sklearn.linear_model
 
 '''
 Afghanistan	Gross domestic product per capita, current prices	U.S. dollars	Units	See notes for:  Gross domestic product, current prices (National currency) Population (Persons).	599.994	2013
@@ -43,6 +43,6 @@ y = np.c_[country_stats[['Life satisfaction']]]
 country_stats.plot(kind='scatter', x = 'GDP per capita', y = 'Life satisfaction')
 plt.show()
 
-model = sklearn.linear_model.LinearRegression()
-model.fit(x,y)
+# model = sklearn.linear_model.LinearRegression()
+# model.fit(x,y)
 
