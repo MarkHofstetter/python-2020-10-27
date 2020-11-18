@@ -1,4 +1,5 @@
 from message import Message, Email, SMS
+from message.MessageSub.letter import Letter
 
 # from message import SMS
 '''
@@ -21,3 +22,9 @@ email.content = 'Hallo Email Body'
 email.subject = 'betreff'
 email.to = 'bla@bli.at'
 email.send()
+
+letter = Letter()
+letter.to = 'Adresse'
+letter.content = 'Mein Brief'
+print(letter.content)
+print(letter.to)

@@ -5,7 +5,6 @@
 
 from abc import ABCMeta, abstractmethod
 
-
 class Message(metaclass = ABCMeta):
     __content = None
     __to      = None
